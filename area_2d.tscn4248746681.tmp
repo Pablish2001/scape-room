@@ -1,34 +1,8 @@
-[gd_scene load_steps=30 format=3 uid="uid://cj3ahx7dx0mh3"]
+[gd_scene load_steps=16 format=3 uid="uid://cj3ahx7dx0mh3"]
 
 [ext_resource type="Script" uid="uid://bw34wyqk6j2by" path="res://area_2d.gd" id="1_dl81w"]
-[ext_resource type="Texture2D" uid="uid://dx3t1pyo02olt" path="res://art/D_Walk.png" id="2_1dtnr"]
 [ext_resource type="Texture2D" uid="uid://doxtfbhj8kbaa" path="res://art/player.png" id="2_dl81w"]
 [ext_resource type="Texture2D" uid="uid://boldqrahfe38v" path="res://art/S_Walk.png" id="3_5rgpn"]
-[ext_resource type="Texture2D" uid="uid://c5fwty83og54k" path="res://art/U_Walk.png" id="4_c33a7"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kucti"]
-atlas = ExtResource("2_1dtnr")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wam52"]
-atlas = ExtResource("2_1dtnr")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_njl78"]
-atlas = ExtResource("2_1dtnr")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k4j6d"]
-atlas = ExtResource("2_1dtnr")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dk10w"]
-atlas = ExtResource("2_1dtnr")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bm6qi"]
-atlas = ExtResource("2_1dtnr")
-region = Rect2(240, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dl81w"]
 atlas = ExtResource("2_dl81w")
@@ -45,30 +19,6 @@ region = Rect2(96, 0, 48, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_1dtnr"]
 atlas = ExtResource("2_dl81w")
 region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_err7g"]
-atlas = ExtResource("4_c33a7")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pyiik"]
-atlas = ExtResource("4_c33a7")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_36a8j"]
-atlas = ExtResource("4_c33a7")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_845px"]
-atlas = ExtResource("4_c33a7")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nf7j2"]
-atlas = ExtResource("4_c33a7")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kdsls"]
-atlas = ExtResource("4_c33a7")
-region = Rect2(240, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c33a7"]
 atlas = ExtResource("3_5rgpn")
@@ -98,29 +48,6 @@ region = Rect2(240, 0, 48, 48)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kucti")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wam52")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_njl78")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k4j6d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dk10w")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bm6qi")
-}],
-"loop": true,
-"name": &"down_walk",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_dl81w")
 }, {
 "duration": 1.0,
@@ -135,29 +62,6 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_err7g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pyiik")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_36a8j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_845px")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nf7j2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kdsls")
-}],
-"loop": true,
-"name": &"up_walk",
-"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -195,7 +99,7 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_c33a7")
-animation = &"up_walk"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_1dtnr")
